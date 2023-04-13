@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using UserSystemApi.Models;
 
-
 namespace UserSystemApi.Services;
 
 [ApiController]
@@ -32,8 +31,8 @@ public class UserController : ControllerBase
     {
         return _userService.GetAllUsers();
     }
-    
-    
+
+
     [HttpGet("{id}")]
     public ActionResult<User> GetUserById(int id)
     {
@@ -63,4 +62,10 @@ public class UserController : ControllerBase
         _userService.DeleteUser(id);
         return NoContent();
     }
+}
+
+public class LoginRequest
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
 }

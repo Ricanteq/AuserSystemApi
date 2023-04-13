@@ -9301,11 +9301,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rican\\RiderProjects\\UserSystem\\UserSystemApi\\UserSystemApi.csproj",
+      "projectUniqueName": "C:\\Users\\rican\\RiderProjects\\AuserSystemApi\\UserSystemApi\\UserSystemApi.csproj",
       "projectName": "UserSystemApi",
-      "projectPath": "C:\\Users\\rican\\RiderProjects\\UserSystem\\UserSystemApi\\UserSystemApi.csproj",
+      "projectPath": "C:\\Users\\rican\\RiderProjects\\AuserSystemApi\\UserSystemApi\\UserSystemApi.csproj",
       "packagesPath": "C:\\Users\\rican\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rican\\RiderProjects\\UserSystem\\UserSystemApi\\obj\\",
+      "outputPath": "C:\\Users\\rican\\RiderProjects\\AuserSystemApi\\UserSystemApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rican\\AppData\\Roaming\\NuGet\\NuGet.Config"

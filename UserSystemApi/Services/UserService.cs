@@ -59,5 +59,14 @@ namespace UserSystemApi.Services
             var user = _userList.FirstOrDefault(u => u.Id == id);
             _userList.Remove(user);
         }
+        
+        public async Task<User?> LoginUser(string email, string password)
+        {
+            var user = _userList.FirstOrDefault(u => u.Email == email);
+            if (user == null) return null;
+
+            var passwordMatches = await VerifyPassword(user, password);
+            return passwordMatches ? user : null;
+        }
     }
 }

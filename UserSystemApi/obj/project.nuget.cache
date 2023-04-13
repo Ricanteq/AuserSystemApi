@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RH+crT2ic58vg9pwzIcNvSXnzE9/xKineT/y31xCHfUWfU88SCxV+i9gFFIreHEsDudfDEG6o1A8pEyECU9rFA==",
+  "dgSpecHash": "JQHs4VQiPgNf3FTjyL3H05gtqH9RCGS1apWlTNH7RvtPf9ATMIK7oeZGEDFExqu1d1KQDzO/4YPZ2VztH+pcoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rican\\RiderProjects\\UserSystem\\UserSystemApi\\UserSystemApi.csproj",
+  "projectFilePath": "C:\\Users\\rican\\RiderProjects\\AuserSystemApi\\UserSystemApi\\UserSystemApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rican\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
     "C:\\Users\\rican\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
