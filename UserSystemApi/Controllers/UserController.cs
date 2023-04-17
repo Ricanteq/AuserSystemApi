@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using UserSystemApi.Models;
+using UserSystemApi.Services;
 
-namespace UserSystemApi.Services;
+namespace UserSystemApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -17,11 +18,6 @@ public class UserController : ControllerBase
     [HttpPost]
     public IActionResult Create(User user)
     {
-        if (string.IsNullOrWhiteSpace(user.FirstName)) return BadRequest("Firstname cannot be empty");
-        if (user.LastName == null) return BadRequest("Lastname cannot be empty");
-        if (user.Email == null) return BadRequest("Email cannot be empty");
-        if (user.Password == null) return BadRequest("Password cannot be empty");
-
         return Ok(_userService.CreateUser(user));
     }
 
@@ -62,10 +58,16 @@ public class UserController : ControllerBase
         _userService.DeleteUser(id);
         return NoContent();
     }
-}
 
-public class LoginRequest
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-}
+    [HttpPost("login")]
+    public async Task<ActionResult<User>> LoginUser(LoginRequest request)
+    {
+        var user = await _userService.LoginUser(request.Email, request.Password);
+        if (user == null) return Unauthorized();
+
+        return user;
+    }
+
+    
+    }
+
